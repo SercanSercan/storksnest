@@ -1,5 +1,8 @@
 import React, {useRef, useState} from 'react';
 import { useKeyListener } from '@fremtind/jkl-react-hooks';
+import cn from 'classnames';
+
+import suggestions from '../mockdata/suggestions';
 
 const Typeahead = () => {
     const [value, setValue] = useState('');
@@ -27,9 +30,29 @@ const Typeahead = () => {
                 type="text"
                 value={value}
                 placeholder="Type to see some suggestions"
+                onChange={(e) => setValue(e.target.value)}
                 onFocus={() => setShowSuggestions(true)}
                 onBlur={() => setShowSuggestions(false)}
             />
+            <ul className="select__wrapper__option-wrapper">
+                {showSuggestions &&
+                suggestions.suggestions.map((suggestion, i) => {
+                    const city = suggestion.capital;
+                    return (
+                        <li
+                            className={cn('select__option', {
+                                hovered_option: i === 2 - 1,
+                            })}
+                            key={i}
+                            onMouseDown={() => {
+                                //chooseText(address);
+                            }}
+                        >
+                            {city}
+                        </li>
+                    );
+                })}
+            </ul>
         </div>
     );
 };
