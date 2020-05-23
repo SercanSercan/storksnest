@@ -1,3 +1,45 @@
 .typeahead {
-  width: 60%;
+
+  &__input {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+
+  &__list {
+    background-color: white;
+    border: 1px solid #6f6f6f;
+    border-top: none;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    max-height: 40vh;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    z-index: 7000;
+
+    &[aria-invalid='true'] {
+      border: 1px solid #6f6f6f;;
+      border-top: none;
+    }
+  }
+
+  &__list-item {
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding: 1rem;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+
+  &__selected_li {
+    background: black;
+    color: white;
+  }
 }
