@@ -18,7 +18,6 @@ const Typeahead = () => {
     const onKeyPressed = (event) => {
         switch (event.key) {
             case 'ArrowDown':
-                console.log("cevriye");
                 if (selectedIndex < capitalSuggestions.length) {
                     setSelectedIndex(selectedIndex + 1);
                 }
@@ -33,7 +32,7 @@ const Typeahead = () => {
                     if (selectedIndex === 0) {
                         setValue(value);
                     } else {
-                        setValue(capitalSuggestions[selectedIndex - 1]);
+                        setValue(capitalSuggestions[selectedIndex - 1].capital);
                     }
                     setShowSuggestions(false);
                     setSelectedIndex(0);
