@@ -8,7 +8,7 @@ offline-modal is a simple implementation which aims to show how to mock addEvent
 The project actually does not deliver any modal, but a blueprint to create one. Therefore, it does not contain any css implementation.
 
 ## How to run offline-modal
-Clone the repository onto your machine
-Install dependencies with 'npm install'
-You can start the server with 'npm start'
-Run 'npm run test' for unit testing.
+Clone the repository onto your machine<br/>
+Install dependencies with 'npm install'<br/>
+You can start the server with 'npm start'<br/>
+Run 'npm run test' for unit testing.<br/>
